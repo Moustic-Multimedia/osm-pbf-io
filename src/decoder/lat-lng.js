@@ -1,2 +1,2 @@
-module.exports = (valueOffset, settingsOffset, granularity) =>
-  (1e-9 * (settingsOffset + (granularity * valueOffset)));
+module.exports = (valueOffset, granularity) =>
+  (1e-9 * (granularity * valueOffset));

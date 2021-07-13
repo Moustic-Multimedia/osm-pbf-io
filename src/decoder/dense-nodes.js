@@ -47,8 +47,8 @@ module.exports = (dense, settings) => {
 
     nodes.push(createNode(
       id,
-      decodeLatLng(lat, settings.latOffset, settings.granularity),
-      decodeLatLng(lng, settings.lngOffset, settings.granularity),
+      decodeLatLng(lat, settings.granularity),
+      decodeLatLng(lng, settings.granularity),
       {
         ...info,
         tags: tags

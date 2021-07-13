@@ -9,7 +9,7 @@ module.exports = (nodes, settings, stringTable) => nodes.map(node => {
     keys: encodedTags.keys,
     vals: encodedTags.vals,
     info: encodeInfo(node, settings, stringTable),
-    lat: encodeLatLng(node.lat, settings.latOffset, settings.granularity),
-    lon: encodeLatLng(node.lng, settings.lngOffset, settings.granularity)
+    lat: encodeLatLng(node.lat, settings.granularity),
+    lon: encodeLatLng(node.lng, settings.granularity)
   };
 });
