@@ -1,5 +1,5 @@
 {
-  "name": "osm-pbf-io",
+  "name": "@loopi/osm-pbf-io",
   "version": "1.0.0",
   "description": ".osm.pbf reader and writer",
   "main": "index.js",
