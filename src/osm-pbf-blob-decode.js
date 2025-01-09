@@ -1,5 +1,5 @@
 const protobuf = require('protobufjs');
-const zlib = require('zlib');
+const zlib = require('node:zlib');
 const decodePrimitiveBlockSettings = require('./decoder/primitive-block-settings');
 const decodeDenseNodes = require('./decoder/dense-nodes');
 const decodeNodes = require('./decoder/nodes');
@@ -29,7 +29,7 @@ module.exports = (blob, blobHeader, parentEvents, withInfos = true) => {
     console.warn(`Unknwon BlobHeader type: ${blobHeader.type}`);
     return;
   }
-  
+
   const primitiveBlock = messages.primitiveBlock.decode(rawBlob);
 
   parentEvents.emit('primitive', primitiveBlock);
